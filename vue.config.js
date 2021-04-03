@@ -66,7 +66,7 @@ module.exports = {
         target: 'http://ihrm-java.itheima.net/', // 跨域请求的地址
         changeOrigin: true, // 只有这个值为true的情况下 才表示开启跨域
       },
-      '/prod-api/(.*)': {
+      '/prod-api/': {
         target: 'http://ihrm-java.itheima.net/api', //后端服务器地址
         changeOrigin: true,
         pathRewrite: {
