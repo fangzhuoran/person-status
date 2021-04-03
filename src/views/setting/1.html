@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      .left {
+        width: 200px;
+        float: left;
+        background-color: red;
+      }
+      .rigth {
+        width: 100%;
+        float: left;
+        background-color: pink;
+      }
+    </style>
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="warp">
+      <div class="left"></div>
+      <div class="right"></div>
+    </div>
+    <script>
+      var arr = [1, 2, 3, [2, 3, 4], [2, [3, [4]]]]
+      // const a = arr.filter(item => {
+      //   console.log(typeof item)
+      //   if (typeof item == 'object') {
+      //     console.log(item)
+      //   }
+      // })
+      // console.log(a)
+      function aaa(list) {
+        const arra = []
+        const a = list.filter(item => {
+          if (typeof item == 'object') {
+            const a = item.join(',')
+            arra.push(a)
+          }
+        })
+        return arra
+      }
+      console.log(aaa(arr))
+    </script>
+  </body>
+</html>
